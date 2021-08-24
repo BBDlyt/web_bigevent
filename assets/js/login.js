@@ -29,7 +29,7 @@ $(function(){
         var password=$('#form_reg [name=password]').val()
         e.preventDefault()
         $.post(
-            'api/reguser',
+            '/api/reguser',
             {username,password},
             function(res){
                 if(res.status!==0){
@@ -44,7 +44,7 @@ $(function(){
         console.log(1)
         e.preventDefault()
         $.ajax({
-            url:'api/login',
+            url:'/api/login',
             method:'post',
             data:$(this).serialize(),
             success:function(res){
